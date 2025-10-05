@@ -18,23 +18,35 @@ inputButton.addEventListener("click", function(){
     // console.log(inputBox)
     //8. get user input from input field
     inputBox.push(inputEl.value)
-    console.log(inputBox)
+
+    //14. clear the input field
+    inputEl.value = ""
+
+    //13
+    render()
 
 })
 
-//12. create empty string to hold the list items
-let listItems = ""
+
+//13 wrap the code using render()
+function render(){
+    //12. create empty string to hold the list items
+    let listItems = ""
 
 
-//9. logout the items in inputBox array using for loop
-for(let i = 0; i < inputBox.length; i++){
-    // console.log(inputBox[i])
-    //10. render the inputBox in unordered list
-    //render the <li> elements
-    // ul.innerHTML += "<li>" + inputBox[i] + "</li>"
+    //9. logout the items in inputBox array using for loop
+    for(let i = 0; i < inputBox.length; i++){
+        // console.log(inputBox[i])
+        //10. render the inputBox in unordered list
+        //render the <li> elements
+        // ul.innerHTML += "<li>" + inputBox[i] + "</li>"
 
-    //12. improve the performance of app
-    listItems += "<li>" + inputBox[i] + "</li>"
+        //12. improve the performance of app
+        listItems += "<li>" + inputBox[i] + "</li>"
+    }
+
+    //12
+    ul.innerHTML = listItems
+
 }
 
-ul.innerHTML = listItems
