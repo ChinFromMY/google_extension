@@ -9,9 +9,27 @@ const ul = document.getElementById("ul-el")
 // 5. logout button clicked when user clicks save input button
 const inputButton = document.getElementById("btn")
 
+//27 make delete btn functionable
+const deleteBtn = document.getDocumentById("delete-btn")
+
+deleteBtn.addEventListener("dblclick", function(){
+    localStorage.clear()
+    myUrl = []
+    render()
+
+})
+
+
+//26
+const urlFromLocalStorage = JSON.parse(localStorage.getItem("myUrl"))
+
+if(urlFromLocalStorage){
+    myUrl = urlFromLocalStorage
+    render()
+}
+
+
 //24
-
-
 inputButton.addEventListener("click", function(){
     // 5. console.log("Button clicked!")
 
@@ -26,6 +44,9 @@ inputButton.addEventListener("click", function(){
 
     //14. clear the input field
     inputEl.value = ""
+
+    //26 save to localStorage
+    localStorage.setItem("myUrl", JSON.stringify(myUrl))
 
     //13
     render()
