@@ -22,10 +22,19 @@ inputButton.addEventListener("click", function(){
 
 })
 
+//12. create empty string to hold the list items
+let listItems = ""
+
+
 //9. logout the items in inputBox array using for loop
 for(let i = 0; i < inputBox.length; i++){
     // console.log(inputBox[i])
     //10. render the inputBox in unordered list
     //render the <li> elements
-    ul.innerHTML += "<li>" + inputBox[i] + "</li>"
+    // ul.innerHTML += "<li>" + inputBox[i] + "</li>"
+
+    //12. improve the performance of app
+    listItems += "<li>" + inputBox[i] + "</li>"
 }
+
+ul.innerHTML = listItems
