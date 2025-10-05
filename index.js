@@ -20,36 +20,40 @@ inputButton.addEventListener("click", function(){
     inputBox.push(inputEl.value)
 
     //16. improvement 3:
-    ulEl.innerHTML += "<li>" + inputEl.value + "</li>"
+    // ulEl.innerHTML += "<li>" + inputEl.value + "</li>"
 
     //14. clear the input field
     inputEl.value = ""
 
     //13
-    // render()
+    render()
 
 })
 
 
-// //13 wrap the code using render()
-// function render(){
-//     //12. create empty string to hold the list items
-//     let listItems = ""
+//13 wrap the code using render()
+function render(){
+    //12. create empty string to hold the list items
+    let listItems = ""
 
 
-//     //9. logout the items in inputBox array using for loop
-//     for(let i = 0; i < inputBox.length; i++){
-//         // console.log(inputBox[i])
-//         //10. render the inputBox in unordered list
-//         //render the <li> elements
-//         // ul.innerHTML += "<li>" + inputBox[i] + "</li>"
+    //9. logout the items in inputBox array using for loop
+    for(let i = 0; i < inputBox.length; i++){
+        // console.log(inputBox[i])
+        //10. render the inputBox in unordered list
+        //render the <li> elements
+        // ul.innerHTML += "<li>" + inputBox[i] + "</li>"
 
-//         //12. improve the performance of app
-//         listItems += "<li>" + inputBox[i] + "</li>"
-//     }
+        //12. improve the performance of app
 
-//     //12
-//     ul.innerHTML = listItems
-
-// }
+        //17
+        listItems += `
+        <li> 
+            <a target='_blank' href='${inputBox[i]}'>
+            ${inputBox[i]} 
+            </a>
+        </li>`
+    }
+    ul.innerHTML = listItems
+}
 
