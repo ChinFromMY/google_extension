@@ -9,6 +9,8 @@ const ul = document.getElementById("ul-el")
 // 5. logout button clicked when user clicks save input button
 const inputButton = document.getElementById("btn")
 
+//24
+
 
 inputButton.addEventListener("click", function(){
     // 5. console.log("Button clicked!")
