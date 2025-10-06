@@ -29,13 +29,12 @@ tabBtn.addEventListener("click", function(){
     //     let activeTabId = activeTab.id
     // })
 
-    chrome.tabs.query({active: true, currentWindow: true, function(tabs){
+    chrome.tabs.query({active: true, currentWindow: true}, function(tabs){
         //30 save the url
         myUrl.push(tabs[0].url)
         localStorage.setItem("myUrl", JSON.stringify(myUrl))
         render(myUrl)
-    }})
-
+    })
 
 })
 
