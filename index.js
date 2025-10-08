@@ -1,3 +1,10 @@
+
+const SUPABASE_URL = CONFIG.SUPABASE_URL
+const SUPABASE_KEY = CONFIG.SUPABASE_KEY
+
+const { createClient } = window.SUPABASE_KEY
+const supabase = createClient(SUPABASE_URL, SUPABASE_KEY)
+
 let myUrl = []
 
 //6 create empty array & get the input id
@@ -20,6 +27,13 @@ const tabBtn = document.getElementById("tab-btn")
 // const tabs = [
 //     {url: "https://www.facebook.com"}
 // ]
+
+const searchInputEl = document.getElementById("search-input")
+const searchBtn = document.getElementById("search-btn")
+const statusEl = document.getElementById("status")
+
+
+
 
 
 tabBtn.addEventListener("click", function(){
