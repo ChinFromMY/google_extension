@@ -1,0 +1,19 @@
+{
+    "manifest_version": 3,
+    "version": "1.0",
+    "name": "Save and search bookmarks using semantic search with Supabase and pgvector",
+    "permissions": [
+        "tabs",
+        "storage"
+    ],
+    "action": {
+        "default_popup": "index.html",
+        "default_title": "Bookmark Manager"
+    },
+    "host_permissions": [
+        "https://*.supabase.co/*"
+    ],
+    "content_security_policy": {
+        "extension_pages": "script-src 'self'; object-src 'self'"
+    }
+}

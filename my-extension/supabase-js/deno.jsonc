@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "jsx": "react",
+    "lib": ["dom", "dom.iterable", "deno.ns"],
+    "strict": true
+  },
+  // This maps the npm specifiers to a local cache, helping VS Code resolve them
+  "imports": {
+    "npm:hono@4": "npm:hono@4.0.0",
+    "npm:@google/generative-ai": "npm:@google/generative-ai@0.1.0" 
+    // Note: You may need to change the version numbers based on what you installed
+  }
+}
